@@ -5,7 +5,7 @@
 </div>
 
 <h1 class="titulo" style="align-items: center;" >
-    Diseño e implementación de arquitectura basada en la nube
+    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&pause=1000&color=F7F7F7&random=false&width=435&lines=Dise%C3%B1o+e+implementaci%C3%B3n+de+arquitectura+basada+en+la+nube" alt="Typing SVG" /></a>
 </h1>
 
 <p>
@@ -18,6 +18,8 @@
     Utilicé servicios de AWS como CloudFormation, Pipeline y CloudWatch para diseñar e implementar una arquitectura sólida y confiable. 
     Además, seguímos el marco de buena arquitectura de AWS para garantizar las prácticas recomendadas en seguridad, rendimiento y optimización de costos.
 </p> 
+
+
 
 <h3 style="align-items: center;">
     <a href="https://git.io/typing-svg">
