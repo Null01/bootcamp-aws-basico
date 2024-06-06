@@ -4,8 +4,8 @@
   <img height="350" width="1080"  src="img/fondo-aws-project.png"  />
 </div>
 
-<h1 class="titulo" style="align-items: center;" >
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&pause=1000&color=F7F7F7&random=false&width=435&lines=Dise%C3%B1o+e+implementaci%C3%B3n+de+arquitectura+basada+en+la+nube" alt="Typing SVG" /></a>
+<h1 class="titulo" align="center" >
+   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&pause=1000&color=F7F7F7&random=false&width=435&lines=Dise%C3%B1o+e+implementaci%C3%B3n+de+arquitectura+basada+en+la+nube" alt="Typing SVG" /></a>
 </h1>
 
 <p>
