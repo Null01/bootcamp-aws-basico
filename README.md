@@ -4,9 +4,7 @@
   <img height="350" width="1080"  src="img/fondo-aws-project.png"  />
 </div>
 
-<h1 class="titulo" align="center" >
-   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&pause=1000&color=F7F7F7&random=false&width=435&lines=Dise%C3%B1o+e+implementaci%C3%B3n+de+arquitectura+basada+en+la+nube" alt="Typing SVG" /></a>
-</h1>
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=4000&size=35&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=Dise%C3%B1o+e+implementaci%C3%B3n+de+arquitectura+basada+en+la+nube)](https://git.io/typing-svg)
 
 <p>
     Bienvenidos a nuestro proyecto. Elaborado por Jose Navarro - Julio - Andres 
