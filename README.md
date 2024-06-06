@@ -1,7 +1,7 @@
 # bootcamp-aws-basico
 
 <div align="center">
-  <img height="250" width="1080"  src="img/fondo-aws-project.png"  />
+  <img height="350" width="1080"  src="img/fondo-aws-project.png"  />
 </div>
 
 <h1 class="titulo" style="align-items: center;" >
