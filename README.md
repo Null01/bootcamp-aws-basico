@@ -1,11 +1,20 @@
 # bootcamp-aws-basico
 
-<h1> 
+<div align="center">
+  <img height="250" width="1080"  src="img/fondo-aws-project.png"  />
+</div>
 
-
+<h1 class="titulo" style="align-items: center;" >
+    Diseño e implementación de arquitectura basada en la nube
 </h1>
 
-<p> 
-    lorem ipsum
+<p>
+    Bienvenidos a nuestro proyecto. Elaborado por Jose Navarro - Julio - Andres 
+    donde diseñé e implementé una arquitectura basada en la nube utilizando Amazon Web Services (AWS). 
+    Este proyecto tenía como objetivo crear una infraestructura escalable, segura y eficiente para implementar modelos de aprendizaje profundo.
+    A través de este proyecto, demostré mis habilidades en computación en la nube, diseño de arquitectura y prácticas de DevOps.
 
-</p>
+    En este repositorio encontrarás una documentación detallada de mi proyecto, incluyendo las fases de planificación, ejecución y seguimiento. 
+    Utilicé servicios de AWS como CloudFormation, Pipeline y CloudWatch para diseñar e implementar una arquitectura sólida y confiable. 
+    Además, seguímos el marco de buena arquitectura de AWS para garantizar las prácticas recomendadas en seguridad, rendimiento y optimización de costos.
+</p> 
