@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Resources:
+ ##Create the databases
+  DBbook:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: 20
+      AvailabilityZone: us-east-1a
+      DBInstanceIdentifier: databasebook
+      DBInstanceClass: db.t3.micro
+      DBName: dbbook
+      DBSubnetGroupName: 
+        Ref: DBbookSubnetGroup
+      Engine: mariadb
+      VPCSecurityGroups:
+        - Fn::ImportValue: !Sub "aws-stack-SGdb"
+      MasterUsername: root
+      MasterUserPassword: '{{resolve:ssm-secure:/book/password:1}}'
+
+  ##Create the subnets
+  DBbookSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Subnets about db
+      DBSubnetGroupName: db-subnet-group-db
+      SubnetIds:
+        - Fn::ImportValue: !Sub "aws-stack-PrivateSubnetAA"
+        - Fn::ImportValue: !Sub "aws-stack-PrivateSubnetBB"
+
+
+Outputs:
+    DBbook:
+        Description: Database endpoint
+        Value: !GetAtt DBbook.Endpoint.Address
