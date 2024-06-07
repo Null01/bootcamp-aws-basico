@@ -57,6 +57,7 @@
         <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&pause=1000&color=F7F7F7&random=false&width=435&lines=Diagrama+Arquitectura;How+vexingly+quick+daft+zebras+jump" alt="Typing SVG" />
     </a>
 </h2>
+<img src="img/aws-structure.png" alt="Diagrama Arquitectura">
 
 <h3 style="align-items: center;">
     <a href="https://git.io/typing-svg">
