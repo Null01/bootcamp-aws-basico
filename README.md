@@ -20,7 +20,7 @@
     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&random=false&width=435&lines=1.+Requerimiento+Funcionales" alt="Typing SVG" /></a>
 </div>
 
-> .[!IMPORTANT].
+> [!NOTE]
 > 1. Requerimientos
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=1.1++Requerimiento+Funcionales" alt="Typing SVG" /></a>
@@ -110,7 +110,7 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=Identificacion+de+Roles" alt="Typing SVG" /></a>
 
-> .[!TIP].
+> [!TIP]
 > A continuación, se presentan los roles y perfiles definidos mediante el servicio IAM.
 
 <ul>
