@@ -1,4 +1,4 @@
-<div align="center">
+    <div align="center">
 <img height="350" width="1000"  src="img/fondo-aws-project.png"  />
 </div>
 
@@ -869,3 +869,22 @@ ScalingPolicyASG:
           PredefinedMetricType: ASGAverageCPUUtilization
         TargetValue: 25
 ```
+
+
+<h2 lign="center">
+    PipeLine
+</h2>
+
+<p>
+    Ejecucion de los script network.yml y luego el aplication.yml en tu entorno Cloud9 
+    Y se ejecuta el despliegue con el comando  python3 app.py en la terminal integrada
+</p>
+
+
+```
+python3 app.py
+```
+
+<p>
+    Ahora podras observar los recursos desplegados de forma correcta en AWS Cloudformation.
+</p>
