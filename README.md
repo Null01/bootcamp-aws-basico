@@ -2,16 +2,13 @@
 <img height="350" width="1000"  src="img/fondo-aws-project.png"  />
 </div>
 
-
 <h1 align="center"> Proyecto AWS - El mundo de las Letras</h1>
-
 
 <h3>
     Bienvenidos a nuestro proyecto. Elaborado por Jose Navarro | Julio | Andres Garcias donde diseñamos e implementamos una arquitectura basada en la nube utilizando Amazon Web Services (AWS). Este proyecto tenía como objetivo crear una infraestructura escalable, segura y eficiente para implementar modelos de aprendizaje profundo. A través de este proyecto, demostré mis habilidades en computación en la nube, diseño de arquitectura y prácticas de DevOps.En este repositorio encontrarás una documentación detallada de mi proyecto basada en AWS Well-Architected, incluyendo las fases de planificación, ejecución y seguimiento. Utilicé servicios de AWS como CloudFormation, Pipeline y CloudWatch para diseñar e implementar una arquitectura sólida y confiable. Además, seguímos el marco de buena arquitectura de AWS para garantizar las prácticas recomendadas en seguridad, rendimiento y optimización de costos.</h3>
 
-
-
 > [!IMPORTANT]
+>
 > <h2> 1. Requerimientos </h2>
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=1.1++Requerimiento+Funcionales" alt="Typing SVG" /></a>
@@ -102,6 +99,7 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=Identificacion+de+Roles" alt="Typing SVG" /></a>
 
 > [!IMPORTANT]
+>
 > <h3> A continuación, se presentan los roles y perfiles definidos mediante el servicio IAM. </h3>
 
 <ul>
@@ -120,8 +118,6 @@
 <div align="center">
         <img height="350" width="500" src="img/aws-structure.png">
 </div>
-
-
 
 > [!NOTE]
 > Seguimiento y Control Basado en AWS Well-Architected Framework
@@ -218,8 +214,6 @@
         <td>Se crean varias tablas de rutas, lo que proporciona una gestión eficiente del enrutamiento y la red.</td>
     </tr>
 </table>
-
-
 <h3 align="center" >Optimización de costos</h3>
 <table>
   <tr>
@@ -259,7 +253,7 @@ Parameters:
 VPC:
     Type: AWS::EC2::VPC
     Properties:
-      CidrBlock: 
+      CidrBlock:
         Ref: VpcCIDR
       EnableDnsHostnames: true
       Tags:
@@ -282,96 +276,98 @@ PublicSubnetAIP:
   PublicSubnetBIP:
     Type: String
     Default: 172.16.2.0/24
-  
+
   PrivateSubnetAIP:
     Type: String
     Default: 172.16.3.0/24
-  
+
   PrivateSubnetBIP:
     Type: String
     Default: 172.16.4.0/24
-    
+
   PrivateSubnetAAIP:
     Type: String
     Default: 172.16.5.0/24
-    
+
   PrivateSubnetBBIP:
     Type: String
     Default: 172.16.6.0/24
 ```
+
 ```
 PublicSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: 
+      VpcId:
         Ref: VPC
       AvailabilityZone: us-east-1a
-      CidrBlock: 
+      CidrBlock:
         Ref: PublicSubnetAIP
       Tags:
         - Key: Name
-          Value: PublicSubnetA 
+          Value: PublicSubnetA
 
   PublicSubnetB:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: 
+      VpcId:
         Ref: VPC
       AvailabilityZone: us-east-1b
-      CidrBlock: 
+      CidrBlock:
         Ref: PublicSubnetBIP
       Tags:
         - Key: Name
-          Value: PublicSubnetB 
-  
+          Value: PublicSubnetB
+
   PrivateSubnetA:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: 
+      VpcId:
       AvailabilityZone: us-east-1a
         Ref: VPC
-      CidrBlock: 
+      CidrBlock:
         Ref: PrivateSubnetAIP
       Tags:
         - Key: Name
-          Value: PrivateSubnetA 
+          Value: PrivateSubnetA
 
   PrivateSubnetB:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: 
+      VpcId:
         Ref: VPC
       AvailabilityZone: us-east-1b
-      CidrBlock: 
+      CidrBlock:
         Ref: PrivateSubnetBIP
       Tags:
         - Key: Name
           Value: PrivateSubnetB
-  
+
   PrivateSubnetAA:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: 
+      VpcId:
         Ref: VPC
       AvailabilityZone: us-east-1a
-      CidrBlock: 
+      CidrBlock:
         Ref: PrivateSubnetAAIP
       Tags:
         - Key: Name
           Value: PrivateSubnetAA
-  
+
   PrivateSubnetBB:
     Type: AWS::EC2::Subnet
     Properties:
-      VpcId: 
+      VpcId:
         Ref: VPC
       AvailabilityZone: us-east-1b
-      CidrBlock: 
+      CidrBlock:
         Ref: PrivateSubnetBBIP
       Tags:
         - Key: Name
           Value: PrivateSubnetBB
 ```
+
 > [!IMPORTANT]
 > Internet Gateway:
 > Una puerta de enlace de Internet (IG) con una etiqueta "Nombre" = "IG_WSC"
@@ -388,9 +384,9 @@ InternetGateway:
   InternetGatewayAttachment:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      InternetGatewayId: 
+      InternetGatewayId:
         Ref: InternetGateway
-      VpcId: 
+      VpcId:
         Ref: VPC
 ```
 
@@ -403,12 +399,12 @@ InternetGateway:
  PublicRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
-      VpcId: 
+      VpcId:
         Ref: VPC
       Tags:
         - Key: Name
           Value: Public_Routes
-  
+
   PublicRouteA:
     Type: AWS::EC2::Route
     DependsOn: InternetGatewayAttachment
@@ -416,23 +412,23 @@ InternetGateway:
       RouteTableId:
         Ref: PublicRouteTable
       DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: 
+      GatewayId:
         Ref: InternetGateway
 
   PublicSubnet1RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: 
+      RouteTableId:
         Ref: PublicRouteTable
-      SubnetId: 
+      SubnetId:
         Ref: PublicSubnetA
 
   PublicSubnet2RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
-      RouteTableId: 
+      RouteTableId:
         Ref: PublicRouteTable
-      SubnetId: 
+      SubnetId:
         Ref: PublicSubnetB
 
 ```
@@ -441,8 +437,6 @@ InternetGateway:
 > Nat Gateway
 > Dos puertas de enlace NAT (A y B) con direcciones IP elásticas
 > Cada puerta de enlace NAT está asociada a una subred pública (A y B) y a una tabla de rutas privada (A y B)
-
-
 
 ```
 NatGatewayA:
@@ -470,28 +464,27 @@ NatGatewayA:
 > IP elásticas:
 > Dos direcciones IP elásticas (A y B) con etiquetas "Nombre" = "EIP-nwA" y "EIP-nwB"
 > Cada dirección IP elástica está asociada a una puerta de enlace NAT (A y B)
+
 ```
 AipELASTIC:
     Type: AWS::EC2::EIP
     Properties:
       Domain:
         Ref: VPC
-      Tags: 
+      Tags:
         - Key: Name
           Value: EIP-nwA
-  
+
   BipELASTIC:
     Type: AWS::EC2::EIP
     Properties:
       Domain:
         Ref: VPC
-      Tags: 
+      Tags:
         - Key: Name
           Value: EIP-nwB
 
 ```
-
-
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=435&lines=Template+Application" alt="Typing SVG" /></a>
 
@@ -587,7 +580,6 @@ AipELASTIC:
     </tr>
 </table>
 
-
 <h3 align="center" >Optimización de costos</h3>
     <table>
         <tr>
@@ -610,4 +602,270 @@ AipELASTIC:
                 automático, lo que garantiza que los recursos estén optimizados para el costo.</td>
         </tr>
     </table>
- 
+
+
+> [!IMPORTANT]
+> Security Group:
+> 4 grupos de seguridad:
+> SGbookPublic: permite el tráfico SSH y HTTP desde cualquier lugar (0.0.0.0/0)
+> SGbookPrivate: permite el tráfico SSH y HTTP desde SGbookPublic y SGalb
+> SGalb: permite el tráfico HTTP desde cualquier lugar (0.0.0.0/0)
+> SGdb: permite el tráfico MySQL desde SGbookPrivate
+
+```
+Resources:
+#Create the SG for instance
+
+  SGbookPublic:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow connection through SSH
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 5000
+          ToPort: 5000
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: sg-book-ws
+      VpcId:
+        Fn::ImportValue:
+            !Sub "aws-stack-VPCID"
+
+  #Create the SG for instance in subnet private
+  SGbookPrivate:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow connection through SSH and HTTP for instance un subnet private
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          SourceSecurityGroupId: !GetAtt SGbookPublic.GroupId
+        - IpProtocol: tcp
+          FromPort: 5000
+          ToPort: 5000
+          SourceSecurityGroupId: !GetAtt SGalb.GroupId
+      Tags:
+        - Key: Name
+          Value: sg-book-private
+      VpcId:
+        Fn::ImportValue:
+            !Sub "aws-stack-VPCID"
+
+  #Create the SG for ALB
+  SGalb:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow connection through HTTP
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: sg-alb
+      VpcId:
+        Fn::ImportValue:
+            !Sub "aws-stack-VPCID"
+
+
+  #Create the SG for DB
+  SGdb:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow connection through SSH and MYSQL for DB in subnet private
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 3306
+          ToPort: 3306
+          SourceSecurityGroupId: !GetAtt SGbookPrivate.GroupId
+      Tags:
+        - Key: Name
+          Value: sg-db
+      VpcId:
+        Fn::ImportValue:
+            !Sub "aws-stack-VPCID"
+
+```
+
+> [!IMPORTANT]
+> Intancias:
+
+```
+bookWSpublic:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-1a
+      ImageId: ami-0bb84b8ffd87024d8
+      InstanceType: t2.micro
+      IamInstanceProfile: LabInstanceProfile
+      KeyName: vockey
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: true
+          DeviceIndex: 0
+          SubnetId:
+            Fn::ImportValue:
+                !Sub "aws-stack-PublicSubnetA"
+          GroupSet:
+            - Ref: SGbookPublic
+      Tags:
+        - Key: Name
+          Value: book-ws-public
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo dnf install -y python3.9-pip
+          pip install virtualenv
+          sudo dnf install -y mariadb105-server
+          sudo service mariadb start
+          sudo chkconfig mariadb on
+          pip install flask
+          pip install mysql-connector-python
+          pip install boto3
+          wget https://jav-bucket-web.s3.amazonaws.com/python-db-ssm.zip
+          wget https://jav-bucket-web.s3.amazonaws.com/databases.zip
+          sudo unzip python-db-ssm.zip
+          sudo unzip databases.zip
+          sudo mv python-db-ssm databases /home/ec2-user
+          wget https://jav-bucket-web.s3.amazonaws.com/bookapp.service
+          sudo mv bookapp.service /etc/systemd/system
+          sudo systemctl daemon-reload
+          sudo systemctl start bookapp
+          sudo systemctl enable bookapp
+```
+
+> [!IMPORTANT]
+> LaunchTemplate:
+
+```
+ LaunchTemplateBook:
+    Type: AWS::EC2::LaunchTemplate
+    Properties:
+      LaunchTemplateData:
+        IamInstanceProfile:
+          Name: LabInstanceProfile
+        ImageId: ami-0bb84b8ffd87024d8
+        KeyName: vockey
+        InstanceType: t2.micro
+        SecurityGroupIds:
+          - Ref: SGbookPrivate
+        UserData:
+          Fn::Base64: !Sub |
+            #!/bin/bash
+            sudo dnf install -y python3.9-pip
+            pip install virtualenv
+            sudo dnf install -y mariadb105-server
+            sudo service mariadb start
+            sudo chkconfig mariadb on
+            pip install flask
+            pip install mysql-connector-python
+            pip install boto3
+            wget https://jav-bucket-web.s3.amazonaws.com/python-db-ssm.zip
+            wget https://jav-bucket-web.s3.amazonaws.com/databases.zip
+            sudo unzip python-db-ssm.zip
+            sudo unzip databases.zip
+            sudo mv python-db-ssm databases /home/ec2-user
+            wget https://jav-bucket-web.s3.amazonaws.com/bookapp.service
+            sudo mv bookapp.service /etc/systemd/system
+            sudo systemctl daemon-reload
+            sudo systemctl start bookapp
+            sudo systemctl enable bookapp
+      LaunchTemplateName: lt-book
+
+```
+
+> [!IMPORTANT]
+> Application Load Balancer (ALB):
+
+```
+ALBbook:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: alb-cafe
+      Scheme: internet-facing
+      SecurityGroups:
+        - Ref: SGalb
+      Subnets:
+        - Fn::ImportValue: !Sub "aws-stack-PublicSubnetA"
+        - Fn::ImportValue: !Sub "aws-stack-PublicSubnetB"
+      Type: application
+```
+
+> [!IMPORTANT]
+> Target Group:
+
+```
+TGelb:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      HealthCheckEnabled: true
+      HealthCheckPath: /health
+      Name: tg-wsbook
+      Port: 5000
+      Protocol: HTTP
+      TargetType: instance
+      VpcId:
+        Fn::ImportValue:
+            !Sub "aws-stack-VPCID"
+```
+
+> [!IMPORTANT]
+> Listener
+
+```
+ListenerALB:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn:
+        Ref: ALBbook
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn:
+            Ref: TGelb
+```
+
+> [!IMPORTANT]
+> Auto Scaling group
+
+```
+ASGbook:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    Properties:
+      AutoScalingGroupName: asg-book
+      DesiredCapacity: 2
+      MaxSize: 4
+      MinSize: 2
+      LaunchTemplate:
+        LaunchTemplateId:
+          Ref: LaunchTemplateBook
+        Version: !GetAtt LaunchTemplateBook.LatestVersionNumber
+      TargetGroupARNs:
+        - Ref: TGelb
+      VPCZoneIdentifier:
+        - Fn::ImportValue: !Sub "aws-stack-PrivateSubnetA"
+        - Fn::ImportValue: !Sub "aws-stack-PrivateSubnetB"
+```
+
+> [!IMPORTANT]
+> Scaling Policy
+
+```
+ScalingPolicyASG:
+    Type: AWS::AutoScaling::ScalingPolicy
+    Properties:
+      AutoScalingGroupName:
+        Ref: ASGbook
+      PolicyType: TargetTrackingScaling
+      TargetTrackingConfiguration:
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ASGAverageCPUUtilization
+        TargetValue: 25
+```
