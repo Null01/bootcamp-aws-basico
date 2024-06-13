@@ -126,7 +126,7 @@
 
 <h2 align="center"> Template Network</h2>
 
-<h3>Excelencia Operativa</h3>
+<h3 align="center">Excelencia Operativa</h3>
 <table>
     <tr>
         <th>Requisito</th>
@@ -149,7 +149,7 @@
     </tr>
 </table>
     
-<h3>Seguridad</h3>
+<h3 align="center">Seguridad</h3>
 <table>
     <tr>
         <th>Requisito</th>
@@ -172,7 +172,7 @@
     </tr>
 </table>
     
-<h3>Fiabilidad</h3>
+<h3 align="center">Fiabilidad</h3>
 <table>
     <tr>
         <th>Requisito</th>
@@ -195,7 +195,7 @@
     </tr>
 </table>
     
-<h3>Optimización del rendimiento</h3>
+<h3 align="center">Optimización del rendimiento</h3>
 <table>
     <tr>
         <th>Requisito</th>
@@ -218,7 +218,7 @@
 </table>
 
 
-<h3>Optimización de costos</h3>
+<h3 align="center" >Optimización de costos</h3>
 <table>
   <tr>
     <th>Requisito</th>
@@ -239,9 +239,9 @@
 </table>
 
 
-<h2 aling="center">Template Application</h2>
+<h2 align="center">Template Application</h2>
 
-<h3>Excelencia Operativa</h3>
+<h3 align="center">Excelencia Operativa</h3>
 <table border="1">
     <tr>
         <th>Requisito</th>
@@ -264,7 +264,7 @@
     </tr>
 </table>
 
-<h3>Seguridad</h3>
+<h3 align="center">Seguridad</h3>
 <table border="1">
     <tr>
         <th>Requisito</th>
@@ -287,7 +287,7 @@
     </tr>
 </table>
 
-<h3>Fiabilidad</h3>
+<h3 align="center">Fiabilidad</h3>
 <table border="1">
     <tr>
         <th>Requisito</th>
@@ -310,7 +310,7 @@
     </tr>
 </table>
 
-<h3>Optimización del rendimiento</h3>
+<h3 align="center">Optimización del rendimiento</h3>
 <table border="1">
     <tr>
         <th>Requisito</th>
