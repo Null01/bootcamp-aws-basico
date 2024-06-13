@@ -240,6 +240,140 @@
   </tr>
 </table>
 
+> [!IMPORTAN]
+> Una VPC con un bloque CIDR de 172.16.0.0/16 (valor predeterminado, se puede anular)
+> Nombres de host DNS habilitados
+> Etiquetado con "Nombre" = "VPC-WEB-SERVER-BOOK"
+> (valor predeterminado, se puede anular)
+> Nombres de host DNS habilitados
+> Etiquetado con "Nombre" = "VPC-WEB-SERVER-BOOK"
+
+```
+Parameters:
+  VpcCIDR:
+    Type: String
+    Default: 172.16.0.0/16
+```
+
+```
+VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: 
+        Ref: VpcCIDR
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: VPC-WEB-SERVER-BOOK
+```
+
+> [!IMPORTAN]
+> Subredes:
+> 6 subredes en total:
+> 2 subredes públicas (A y B) con bloques CIDR de 172.16.1.0/24 y 172.16.2.0/24 (valores predeterminados, se pueden anular)
+> 4 subredes privadas (A, B, AA y BB) con bloques CIDR de 172.16.3.0/24, 172.16.4.0/24, 172.16.5.0/24 y 172.16.6.0/24 (valores predeterminados, se pueden anular)
+> Cada subred se etiqueta con una etiqueta "Nombre" que indica su propósito (por ejemplo, "PublicSubnetA", "PrivateSubnetB", etc.)
+
+```
+PublicSubnetAIP:
+    Type: String
+    Default: 172.16.1.0/24
+
+  PublicSubnetBIP:
+    Type: String
+    Default: 172.16.2.0/24
+  
+  PrivateSubnetAIP:
+    Type: String
+    Default: 172.16.3.0/24
+  
+  PrivateSubnetBIP:
+    Type: String
+    Default: 172.16.4.0/24
+    
+  PrivateSubnetAAIP:
+    Type: String
+    Default: 172.16.5.0/24
+    
+  PrivateSubnetBBIP:
+    Type: String
+    Default: 172.16.6.0/24
+```
+```
+PublicSubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: 
+        Ref: VPC
+      AvailabilityZone: us-east-1a
+      CidrBlock: 
+        Ref: PublicSubnetAIP
+      Tags:
+        - Key: Name
+          Value: PublicSubnetA 
+
+  PublicSubnetB:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: 
+        Ref: VPC
+      AvailabilityZone: us-east-1b
+      CidrBlock: 
+        Ref: PublicSubnetBIP
+      Tags:
+        - Key: Name
+          Value: PublicSubnetB 
+  
+  PrivateSubnetA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: 
+      AvailabilityZone: us-east-1a
+        Ref: VPC
+      CidrBlock: 
+        Ref: PrivateSubnetAIP
+      Tags:
+        - Key: Name
+          Value: PrivateSubnetA 
+
+  PrivateSubnetB:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: 
+        Ref: VPC
+      AvailabilityZone: us-east-1b
+      CidrBlock: 
+        Ref: PrivateSubnetBIP
+      Tags:
+        - Key: Name
+          Value: PrivateSubnetB
+  
+  PrivateSubnetAA:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: 
+        Ref: VPC
+      AvailabilityZone: us-east-1a
+      CidrBlock: 
+        Ref: PrivateSubnetAAIP
+      Tags:
+        - Key: Name
+          Value: PrivateSubnetAA
+  
+  PrivateSubnetBB:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: 
+        Ref: VPC
+      AvailabilityZone: us-east-1b
+      CidrBlock: 
+        Ref: PrivateSubnetBBIP
+      Tags:
+        - Key: Name
+          Value: PrivateSubnetBB
+```
+
+
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=435&lines=Template+Application" alt="Typing SVG" /></a>
 
