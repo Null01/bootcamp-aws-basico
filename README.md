@@ -16,12 +16,9 @@
     <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&center=true&random=false&width=435&lines=Requerimientos" alt="Typing SVG" /></a>
 </h2>
 
-<div aling>
-    <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&random=false&width=435&lines=1.+Requerimiento+Funcionales" alt="Typing SVG" /></a>
-</div>
 
-> [!NOTE]
-> 1. Requerimientos
+> [!IMPORTANT]
+> <h2> 1. Requerimientos </h2>
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=15&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=1.1++Requerimiento+Funcionales" alt="Typing SVG" /></a>
 
@@ -111,7 +108,7 @@
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=Identificacion+de+Roles" alt="Typing SVG" /></a>
 
 > [!TIP]
-> A continuación, se presentan los roles y perfiles definidos mediante el servicio IAM.
+> <h3> A continuación, se presentan los roles y perfiles definidos mediante el servicio IAM. </h3>
 
 <ul>
     <li>Administrador de nube y servidores: posee derechos de administración totales, con acceso a todos los recursos de AWS.</li>
