@@ -121,3 +121,121 @@
 > Diagrama Arquitectura
 
 <img height="350" width="500" src="img/aws-structure.png">
+
+
+
+> [!NOTE]
+> Seguimiento y Control Basado en AWS Well-Architected Framework
+
+<h3>Excelencia Operativa</h3>
+<table>
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>VPC</td>
+        <td>Configurado con un bloque CIDR predeterminado y nombres de host DNS habilitados, lo que demuestra una
+            configuración de infraestructura bien planificada y ejecutada.</td>
+    </tr>
+    <tr>
+        <td>RouteTables</td>
+        <td>Se crean varias tablas de rutas para subredes públicas y privadas, lo que garantiza un enrutamiento y una
+            gestión de red eficientes.</td>
+    </tr>
+    <tr>
+        <td>Asociación de tablas de rutas</td>
+        <td>Las tablas de rutas están asociadas a las subredes correctas, lo que garantiza que el tráfico se enrute de
+            forma correcta y eficiente.</td>
+    </tr>
+</table>
+    
+<h3>Seguridad</h3>
+<table>
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>VPC</td>
+        <td>La VPC está configurada con un bloque CIDR predeterminado, que ayuda a evitar el acceso no autorizado a la
+            red.</td>
+    </tr>
+    <tr>
+        <td>InternetGateway</td>
+        <td>La puerta de enlace de Internet está conectada a la VPC, lo que proporciona un punto de entrada y salida
+            seguro para el tráfico de Internet.</td>
+    </tr>
+    <tr>
+        <td>NAT Gateway</td>
+        <td>Se crean dos puertas de enlace NAT, cada una con su propia dirección IP elástica, lo que proporciona una
+            forma segura y escalable de acceder a Internet desde subredes privadas.</td>
+    </tr>
+</table>
+    
+<h3>Fiabilidad</h3>
+<table>
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>NAT Gateway</td>
+        <td>Se crean dos puertas de enlace NAT, lo que proporciona redundancia y garantiza que, si una puerta de enlace
+            falla, la otra pueda seguir proporcionando acceso a Internet a subredes privadas.</td>
+    </tr>
+    <tr>
+        <td>RouteTable</td>
+        <td>Se crean varias tablas de rutas, lo que proporciona redundancia y garantiza que si una tabla de rutas falla,
+            la otra puede continuar enrutando el tráfico correctamente.</td>
+    </tr>
+    <tr>
+        <td>Subredes</td>
+        <td>Se crean seis subredes, que proporcionan una infraestructura de red escalable y flexible que puede adaptarse
+            a las necesidades cambiantes del negocio.</td>
+    </tr>
+</table>
+    
+<h3>Optimización del rendimiento</h3>
+<table>
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Subredes</td>
+        <td>Se crean seis subredes, cada una con su propio bloque CIDR, lo que proporciona una infraestructura de red
+            escalable y flexible que puede adaptarse a las necesidades cambiantes del negocio.</td>
+    </tr>
+    <tr>
+        <td>NAT Gateway</td>
+        <td>Se crean dos puertas de enlace NAT, cada una con su propia dirección IP elástica, lo que proporciona una
+            forma escalable y eficiente de acceder a Internet desde subredes privadas.</td>
+    </tr>
+    <tr>
+        <td>Tablas de rutas</td>
+        <td>Se crean varias tablas de rutas, lo que proporciona una gestión eficiente del enrutamiento y la red.</td>
+    </tr>
+</table>
+
+
+<h3>Optimización de costos</h3>
+<table>
+  <tr>
+    <th>Requisito</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td>VPC</td>
+    <td>La VPC está configurada con un bloque CIDR predeterminado, que ayuda a optimizar los recursos de la red y reducir los costos.</td>
+  </tr>
+  <tr>
+    <td>NAT Gateway</td>
+    <td>Se crean dos puertas de enlace NAT, cada una con su propia dirección IP elástica, lo que proporciona una forma rentable de acceder a Internet desde subredes privadas.</td>
+  </tr>
+  <tr>
+    <td>Subredes</td>
+    <td>Se crean seis subredes, cada una con su propio bloque CIDR, que proporcionan una infraestructura de red rentable y escalable que puede adaptarse a las necesidades cambiantes del negocio.</td>
+  </tr>
+</table>
+
