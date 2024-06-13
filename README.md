@@ -876,14 +876,31 @@ ScalingPolicyASG:
 </h2>
 
 <p>
-    Ejecucion de los script network.yml y luego el aplication.yml en tu entorno Cloud9 
-    Y se ejecuta el despliegue con el comando  python3 app.py en la terminal integrada
+    1. Se crea el repositorio en codecommit (tener en cuenta el doble guión).
+    1.1 Para ver los repositorios creados.
+    1.2 Para obtener información del repositorio
+    2. Se clona el repositorio, para obtener la carpeta a trabajar.
+    3. Creación de los archivos network.yml & aplication.yml
+    3.1 Validacion del Template
+    3.2 Realizamos el push al repositorio (add. , git commit, git push).
+    4. Configuramos el pipeline, en aws es codePipeline. Esto con el fin de que si se da un
+    push, la infraestructura se desplegará automáticamente. Guia pipeline
+
 </p>
 
 
+
+
 ```
-python3 app.py
+1. aws codecommit create-repository --repository-name infraestructura-aws
+--repository-description "crear infraestructura en aws"
+1.1 aws codecommit list-repositories
+1.2 aws codecommit get-repository --repository-name infraestructura-aws
+2. git clone "link del repositorio"
+3.1 aws cloudformation validate-template --template-body file://network.yml
+3.2 git push codecommit::us-east-1://infraestructura-aws
 ```
+
 
 <p>
     Ahora podras observar los recursos desplegados de forma correcta en AWS Cloudformation.
