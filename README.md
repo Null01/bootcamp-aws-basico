@@ -390,7 +390,7 @@ InternetGateway:
         Ref: VPC
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Route Table:
 > Una tabla de rutas pública con una etiqueta "Nombre" = "Public_Routes"
 > Dos tablas de rutas privadas (una para cada NatGateway) con las etiquetas "Name" = "Route-NW-A" y "Route-NW-B"
@@ -876,28 +876,28 @@ ScalingPolicyASG:
 </h2>
 <img  height="350" width="1000"src="img/codepipeline.jpg" alt="">
 
-<p>
-    1. Se crea el repositorio en codecommit (tener en cuenta el doble guión).
-    1.1 Para ver los repositorios creados.
-    1.2 Para obtener información del repositorio
-    2. Se clona el repositorio, para obtener la carpeta a trabajar.
-    3. Creación de los archivos network.yml & aplication.yml
-    3.1 Validacion del Template
-    3.2 Realizamos el push al repositorio (add. , git commit, git push).
-    4. Configuramos el pipeline, en aws es codePipeline. Esto con el fin de que si se da un
-    push, la infraestructura se desplegará automáticamente. Revisar GuiaPipeline.pdf
+<ol>
+    <li>Se crea el repositorio en codecommit (tener en cuenta el doble guión).</li>
+    <li> -- Para ver los repositorios creados.</li>
+    <li> -- Para obtener información del repositorio</li>
+    <li>Se clona el repositorio, para obtener la carpeta a trabajar.</li>
+    <li>Creación de los archivos network.yml & aplication.yml</li>
+    <li>-- Validacion del Template</li>
+    <li>-- Realizamos el push al repositorio (add. , git commit, git push).</li>
+    <li>Configuramos el pipeline, en aws es codePipeline. Esto con el fin de que si se da un
+        push, la infraestructura se desplegará automáticamente. Revisar GuiaPipeline.pdf</li>
 
-</p>
+</ol>
+
 
 ```
 1. aws codecommit create-repository --repository-name infraestructura-aws
 --repository-description "crear infraestructura en aws"
-1.1 aws codecommit list-repositories
+    -- aws codecommit list-repositories
 1.2 aws codecommit get-repository --repository-name infraestructura-aws
 2. git clone "link del repositorio"
-3.1 aws cloudformation validate-template --template-body file://network.yml
-3.2 git push codecommit::us-east-1://infraestructura-aws
-python3 app.py
+    -- aws cloudformation validate-template --template-body file://network.yml
+    -- git push codecommit::us-east-1://infraestructura-aws
 ```
 
 <p>
