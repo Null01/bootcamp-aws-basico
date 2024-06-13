@@ -125,7 +125,6 @@
 > Seguimiento y Control Basado en AWS Well-Architected Framework
 
 <h2 align="center"> Template Network</h2>
-<img height="300" width="1700"src="img/network-canva.png" alt="Diagrama Network">
 
 <h3>Excelencia Operativa</h3>
 <table>
@@ -239,3 +238,97 @@
   </tr>
 </table>
 
+
+<h2 aling="center">Template Application</h2>
+
+<h3>Excelencia Operativa</h3>
+<table border="1">
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>LaunchTemplate</td>
+        <td>Se crea una plantilla de lanzamiento con un ID de imagen, un tipo de instancia y un grupo de seguridad
+            específicos, lo que demuestra una configuración de infraestructura bien planificada y ejecutada.</td>
+    </tr>
+    <tr>
+        <td>Auto Scaling Group</td>
+        <td>Se crea un grupo de escalado automático con la capacidad deseada, el tamaño máximo y mínimo, y una plantilla
+            de lanzamiento, lo que garantiza un escalado y una gestión eficientes de los recursos.</td>
+    </tr>
+    <tr>
+        <td>Scaling Policy</td>
+        <td>Se crea una política de escalado para realizar un seguimiento de la utilización media de la CPU del grupo de
+            escalado automático, lo que demuestra un enfoque proactivo para la gestión de recursos.</td>
+    </tr>
+</table>
+
+<h3>Seguridad</h3>
+<table border="1">
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>Security Group</td>
+        <td>Se crean cuatro grupos de seguridad con reglas específicas para controlar el tráfico entrante y saliente, lo
+            que demuestra una configuración de infraestructura segura.</td>
+    </tr>
+    <tr>
+        <td>LaunchTemplate</td>
+        <td>Asociada a un grupo de seguridad específico, lo que garantiza que las instancias lanzadas desde la plantilla
+            tengan la configuración de seguridad correcta.</td>
+    </tr>
+    <tr>
+        <td>Auto Scaling Group</td>
+        <td>Asociado a un grupo de seguridad específico, lo que garantiza que las instancias lanzadas por el grupo
+            tengan la configuración de seguridad correcta.</td>
+    </tr>
+</table>
+
+<h3>Fiabilidad</h3>
+<table border="1">
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>AutoScalingGroup</td>
+        <td>Se crea con la capacidad deseada, el tamaño máximo y mínimo, y una plantilla de lanzamiento, lo que
+            garantiza que la aplicación pueda escalar para satisfacer las demandas cambiantes.</td>
+    </tr>
+    <tr>
+        <td>Target Group</td>
+        <td>Se crea un grupo de destino con una comprobación de estado, lo que garantiza que el equilibrador de carga
+            solo enrute a las instancias en buen estado.</td>
+    </tr>
+    <tr>
+        <td>Application Load Balancer (ALB)</td>
+        <td>Se crea un ALB con una subred pública y un grupo de seguridad, lo que garantiza que el tráfico se distribuya
+            entre varias instancias y zonas de disponibilidad.</td>
+    </tr>
+</table>
+
+<h3>Optimización del rendimiento</h3>
+<table border="1">
+    <tr>
+        <th>Requisito</th>
+        <th>Descripción</th>
+    </tr>
+    <tr>
+        <td>LaunchTemplate</td>
+        <td>Se configura con un tipo de instancia y un ID de imagen específicos, lo que garantiza que las instancias
+            estén optimizadas para el rendimiento.</td>
+    </tr>
+    <tr>
+        <td>AutoScalingGroup</td>
+        <td>Se configura con la capacidad deseada, el tamaño máximo y mínimo, y una plantilla de lanzamiento, lo que
+            garantiza que los recursos estén optimizados para el rendimiento.</td>
+    </tr>
+    <tr>
+        <td>TargetGroup</td>
+        <td>Se configura con una comprobación de estado, lo que garantiza que el balanceador de carga solo enrute a las
+            instancias en buen estado, lo que optimiza el rendimiento.</td>
+    </tr>
+</table>
