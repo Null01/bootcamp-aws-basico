@@ -240,7 +240,7 @@
   </tr>
 </table>
 
-> [!IMPORTAN]
+> [!IMPORTANT]
 > Una VPC con un bloque CIDR de 172.16.0.0/16 (valor predeterminado, se puede anular)
 > Nombres de host DNS habilitados
 > Etiquetado con "Nombre" = "VPC-WEB-SERVER-BOOK"
@@ -267,7 +267,7 @@ VPC:
           Value: VPC-WEB-SERVER-BOOK
 ```
 
-> [!IMPORTAN]
+> [!IMPORTANT]
 > Subredes:
 > 6 subredes en total:
 > 2 subredes públicas (A y B) con bloques CIDR de 172.16.1.0/24 y 172.16.2.0/24 (valores predeterminados, se pueden anular)
