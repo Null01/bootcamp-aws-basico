@@ -5,7 +5,7 @@
 <h1 align="center"> Proyecto AWS - El mundo de las Letras</h1>
 
 <h3>
-    Bienvenidos a nuestro proyecto. Elaborado por Jose Navarro | Julio | Andres Garcias donde diseñamos e implementamos una arquitectura basada en la nube utilizando Amazon Web Services (AWS). Este proyecto tenía como objetivo crear una infraestructura escalable, segura y eficiente para implementar modelos de aprendizaje profundo. A través de este proyecto, demostré mis habilidades en computación en la nube, diseño de arquitectura y prácticas de DevOps.En este repositorio encontrarás una documentación detallada de mi proyecto basada en AWS Well-Architected, incluyendo las fases de planificación, ejecución y seguimiento. Utilicé servicios de AWS como CloudFormation, Pipeline y CloudWatch para diseñar e implementar una arquitectura sólida y confiable. Además, seguímos el marco de buena arquitectura de AWS para garantizar las prácticas recomendadas en seguridad, rendimiento y optimización de costos.</h3>
+    Bienvenidos a nuestro proyecto. Elaborado por Jose Navarro | Julio Anibal | Andres Garcia donde diseñamos e implementamos una arquitectura basada en la nube utilizando Amazon Web Services (AWS). Este proyecto tenía como objetivo crear una infraestructura escalable, segura y eficiente para implementar modelos de aprendizaje profundo. A través de este proyecto, demostré mis habilidades en computación en la nube, diseño de arquitectura y prácticas de DevOps.En este repositorio encontrarás una documentación detallada de mi proyecto basada en AWS Well-Architected, incluyendo las fases de planificación, ejecución y seguimiento. Utilicé servicios de AWS como CloudFormation, Pipeline y CloudWatch para diseñar e implementar una arquitectura sólida y confiable. Además, seguímos el marco de buena arquitectura de AWS para garantizar las prácticas recomendadas en seguridad, rendimiento y optimización de costos.</h3>
 
 > [!IMPORTANT]
 >
@@ -86,15 +86,28 @@
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=1.2++Requerimiento+no+Funcionales" alt="Typing SVG" /></a>
 
-<ul>
-    <li>Aplicacion en Python 3</li>
-    <li>Base de Datos en MariaDB</li>
-    <li>Etiquetado de recursos con nombres descriptivos para facilitar la identificación y gestión.</li>
-    <li>Uso de nombres de host DNS habilitados para facilitar la resolución de nombres.</li>
-    <li>Uso de puertas de enlace NAT para proteger las instancias en subredes privadas.</li>
-    <li>Creación de múltiples subredes y puertas de enlace NAT para admitir un crecimiento futuro.</li>
-    <li>Uso de nombres descriptivos y configuración de recursos para facilitar la gestión y mantenimiento de la infraestructura.</li>
-</ul>
+<ol>
+        <li>Aplicacion en Python 3</li>
+        <li>Base de Datos en MariaDB</li>
+        <li>Etiquetado de recursos con nombres descriptivos para facilitar la identificación y gestión.</li>
+        <li>Uso de nombres de host DNS habilitados para facilitar la resolución de nombres.</li>
+        <li>Uso de puertas de enlace NAT para proteger las instancias en subredes privadas.</li>
+        <li>Creación de múltiples subredes y puertas de enlace NAT para admitir un crecimiento futuro.</li>
+        <li>Uso de nombres descriptivos y configuración de recursos para facilitar la gestión y mantenimiento de la infraestructura.</li>
+</ol>
+    
+<h3>
+<a href="https://calculator.aws/#/"> AWS Pricing Calculator</a>
+</h3>
+
+<p>
+AWS Pricing Calculator es una herramienta de planificación gratuita basada en la web que le permite crear estimaciones de costos para el uso de los servicios de AWS. Puede utilizarlo para modelar sus soluciones antes de crearlas, explorar los precios de los servicios de AWS, revisar los cálculos en los que se basan sus estimaciones, planificar el gasto en AWS y encontrar oportunidades de ahorro de costos.
+</p>
+
+> [!IMPORTANT]
+> <h3> Las estimaciones de costos del proyecto El Mundo de las Letras se peude consultar en EstimateEC2V2.pdf </h3>
+
+
 
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&pause=1000&color=F7F7F7&center=true&vCenter=true&random=false&width=435&lines=Identificacion+de+Roles" alt="Typing SVG" /></a>
 
