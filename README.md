@@ -117,14 +117,16 @@
 > [!IMPORTANT]
 > Diagrama Arquitectura
 
-<img height="350" width="500" src="img/aws-structure.png">
+<div align="center">
+        <img height="350" width="500" src="img/aws-structure.png">
+</div>
 
 
 
 > [!NOTE]
 > Seguimiento y Control Basado en AWS Well-Architected Framework
 
-<h2 align="center"> Template Network</h2>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=435&lines=Template+Network" alt="Typing SVG" /></a>
 
 <h3 align="center">Excelencia Operativa</h3>
 <table>
@@ -239,10 +241,10 @@
 </table>
 
 
-<h2 align="center">Template Application</h2>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&pause=1000&color=FFFFFF&center=true&vCenter=true&random=false&width=435&lines=Template+Application" alt="Typing SVG" /></a>
 
 <h3 align="center">Excelencia Operativa</h3>
-<table border="1">
+<table>
     <tr>
         <th>Requisito</th>
         <th>Descripción</th>
@@ -265,7 +267,7 @@
 </table>
 
 <h3 align="center">Seguridad</h3>
-<table border="1">
+<table>
     <tr>
         <th>Requisito</th>
         <th>Descripción</th>
@@ -288,7 +290,7 @@
 </table>
 
 <h3 align="center">Fiabilidad</h3>
-<table border="1">
+<table>
     <tr>
         <th>Requisito</th>
         <th>Descripción</th>
@@ -311,7 +313,7 @@
 </table>
 
 <h3 align="center">Optimización del rendimiento</h3>
-<table border="1">
+<table>
     <tr>
         <th>Requisito</th>
         <th>Descripción</th>
@@ -332,3 +334,28 @@
             instancias en buen estado, lo que optimiza el rendimiento.</td>
     </tr>
 </table>
+
+
+<h3 align="center" >Optimización de costos</h3>
+    <table>
+        <tr>
+            <th>Requisito</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>LaunchTemplate</td>
+            <td>Se configura con un tipo de instancia específico, lo que garantiza que los recursos estén optimizados para
+                el costo.</td>
+        </tr>
+        <tr>
+            <td>AutoScalingGroup</td>
+            <td>Se configura con la capacidad deseada, el tamaño máximo y mínimo, y una plantilla de lanzamiento, lo que
+                garantiza que los recursos estén optimizados para el costo.</td>
+        </tr>
+        <tr>
+            <td>Policy</td>
+            <td>Se configura para realizar un seguimiento de la utilización media de la CPU del grupo de escalado
+                automático, lo que garantiza que los recursos estén optimizados para el costo.</td>
+        </tr>
+    </table>
+ 
