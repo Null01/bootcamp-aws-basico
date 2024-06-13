@@ -125,7 +125,7 @@
 > Seguimiento y Control Basado en AWS Well-Architected Framework
 
 <h2 align="center"> Template Network</h2>
-<img height="1742" width="1590"src="img/network-canva.png" alt="Diagrama Network">
+<img height="1590" width="1742"src="img/network-canva.png" alt="Diagrama Network">
 
 <h3>Excelencia Operativa</h3>
 <table>
