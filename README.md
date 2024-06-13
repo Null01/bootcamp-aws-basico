@@ -372,6 +372,124 @@ PublicSubnetA:
         - Key: Name
           Value: PrivateSubnetBB
 ```
+> [!IMPORTANT]
+> Internet Gateway:
+> Una puerta de enlace de Internet (IG) con una etiqueta "Nombre" = "IG_WSC"
+> Adjunto a la VPC
+
+```
+InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: IG_WSC
+
+  InternetGatewayAttachment:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: 
+        Ref: InternetGateway
+      VpcId: 
+        Ref: VPC
+```
+
+> [!IMPORTANT]
+> Route Table:
+> Una tabla de rutas pública con una etiqueta "Nombre" = "Public_Routes"
+> Dos tablas de rutas privadas (una para cada NatGateway) con las etiquetas "Name" = "Route-NW-A" y "Route-NW-B"
+
+```
+ PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: 
+        Ref: VPC
+      Tags:
+        - Key: Name
+          Value: Public_Routes
+  
+  PublicRouteA:
+    Type: AWS::EC2::Route
+    DependsOn: InternetGatewayAttachment
+    Properties:
+      RouteTableId:
+        Ref: PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: 
+        Ref: InternetGateway
+
+  PublicSubnet1RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: 
+        Ref: PublicRouteTable
+      SubnetId: 
+        Ref: PublicSubnetA
+
+  PublicSubnet2RouteTableAssociation:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      RouteTableId: 
+        Ref: PublicRouteTable
+      SubnetId: 
+        Ref: PublicSubnetB
+
+```
+
+> [!IMPORTANT]
+> Nat Gateway
+> Dos puertas de enlace NAT (A y B) con direcciones IP elásticas
+> Cada puerta de enlace NAT está asociada a una subred pública (A y B) y a una tabla de rutas privada (A y B)
+
+
+
+```
+NatGatewayA:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt AipELASTIC.AllocationId
+      SubnetId:
+        Ref: PublicSubnetA
+      Tags:
+        - Key: Name
+          Value: NatGatewayA-subnetPublicA
+
+  NatGatewayB:
+    Type: AWS::EC2::NatGateway
+    Properties:
+      AllocationId: !GetAtt BipELASTIC.AllocationId
+      SubnetId:
+        Ref: PublicSubnetB
+      Tags:
+        - Key: Name
+          Value: NatGatewayA-subnetPublicB
+```
+
+> [!IMPORTANT]
+> IP elásticas:
+> Dos direcciones IP elásticas (A y B) con etiquetas "Nombre" = "EIP-nwA" y "EIP-nwB"
+> Cada dirección IP elástica está asociada a una puerta de enlace NAT (A y B)
+```
+AipELASTIC:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain:
+        Ref: VPC
+      Tags: 
+        - Key: Name
+          Value: EIP-nwA
+  
+  BipELASTIC:
+    Type: AWS::EC2::EIP
+    Properties:
+      Domain:
+        Ref: VPC
+      Tags: 
+        - Key: Name
+          Value: EIP-nwB
+
+```
 
 
 
