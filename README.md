@@ -1,4 +1,4 @@
-    <div align="center">
+<div align="center">
 <img height="350" width="1000"  src="img/fondo-aws-project.png"  />
 </div>
 
@@ -695,7 +695,7 @@ Resources:
 ```
 
 > [!NOTE]
-> Intancias:
+> Intancias
 
 ```
 bookWSpublic:
@@ -741,7 +741,7 @@ bookWSpublic:
 ```
 
 > [!NOTE]
-> LaunchTemplate:
+> LaunchTemplate
 
 ```
  LaunchTemplateBook:
@@ -832,7 +832,7 @@ ListenerALB:
             Ref: TGelb
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Auto Scaling group
 
 ```
@@ -874,7 +874,7 @@ ScalingPolicyASG:
 <h2>
     <a href="https://aws.amazon.com/codepipeline/"> AWS CodePipeLine </a>
 </h2>
-<img  height="350" width="1000"src="img/codepipeline" alt="">
+<img  height="350" width="1000"src="img/codepipeline.jpg" alt="">
 
 <p>
     1. Se crea el repositorio en codecommit (tener en cuenta el doble guión).
