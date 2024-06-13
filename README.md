@@ -234,7 +234,7 @@
   </tr>
 </table>
 
-> [!IMPORTANT]
+> [!NOTE]
 > Una VPC con un bloque CIDR de 172.16.0.0/16 (valor predeterminado, se puede anular)
 > Nombres de host DNS habilitados
 > Etiquetado con "Nombre" = "VPC-WEB-SERVER-BOOK"
@@ -261,7 +261,7 @@ VPC:
           Value: VPC-WEB-SERVER-BOOK
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Subredes:
 > 6 subredes en total:
 > 2 subredes públicas (A y B) con bloques CIDR de 172.16.1.0/24 y 172.16.2.0/24 (valores predeterminados, se pueden anular)
@@ -368,7 +368,7 @@ PublicSubnetA:
           Value: PrivateSubnetBB
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Internet Gateway:
 > Una puerta de enlace de Internet (IG) con una etiqueta "Nombre" = "IG_WSC"
 > Adjunto a la VPC
@@ -433,7 +433,7 @@ InternetGateway:
 
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Nat Gateway
 > Dos puertas de enlace NAT (A y B) con direcciones IP elásticas
 > Cada puerta de enlace NAT está asociada a una subred pública (A y B) y a una tabla de rutas privada (A y B)
@@ -460,7 +460,7 @@ NatGatewayA:
           Value: NatGatewayA-subnetPublicB
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > IP elásticas:
 > Dos direcciones IP elásticas (A y B) con etiquetas "Nombre" = "EIP-nwA" y "EIP-nwB"
 > Cada dirección IP elástica está asociada a una puerta de enlace NAT (A y B)
@@ -604,7 +604,7 @@ AipELASTIC:
     </table>
 
 
-> [!IMPORTANT]
+> [!NOTE]
 > Security Group:
 > 4 grupos de seguridad:
 > SGbookPublic: permite el tráfico SSH y HTTP desde cualquier lugar (0.0.0.0/0)
@@ -694,7 +694,7 @@ Resources:
 
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Intancias:
 
 ```
@@ -740,7 +740,7 @@ bookWSpublic:
           sudo systemctl enable bookapp
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > LaunchTemplate:
 
 ```
@@ -780,7 +780,7 @@ bookWSpublic:
 
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Application Load Balancer (ALB):
 
 ```
@@ -797,7 +797,7 @@ ALBbook:
       Type: application
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Target Group:
 
 ```
@@ -815,7 +815,7 @@ TGelb:
             !Sub "aws-stack-VPCID"
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Listener
 
 ```
@@ -854,7 +854,7 @@ ASGbook:
         - Fn::ImportValue: !Sub "aws-stack-PrivateSubnetB"
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Scaling Policy
 
 ```
