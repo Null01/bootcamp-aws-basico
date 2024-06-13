@@ -871,9 +871,10 @@ ScalingPolicyASG:
 ```
 
 
-<h2 lign="center">
-    PipeLine
+<h2>
+    <a href="https://aws.amazon.com/codepipeline/"> AWS CodePipeLine </a>
 </h2>
+<img  height="350" width="1000"src="img/codepipeline" alt="">
 
 <p>
     1. Se crea el repositorio en codecommit (tener en cuenta el doble guión).
@@ -884,12 +885,9 @@ ScalingPolicyASG:
     3.1 Validacion del Template
     3.2 Realizamos el push al repositorio (add. , git commit, git push).
     4. Configuramos el pipeline, en aws es codePipeline. Esto con el fin de que si se da un
-    push, la infraestructura se desplegará automáticamente. Guia pipeline
+    push, la infraestructura se desplegará automáticamente. Revisar GuiaPipeline.pdf
 
 </p>
-
-
-
 
 ```
 1. aws codecommit create-repository --repository-name infraestructura-aws
@@ -899,9 +897,17 @@ ScalingPolicyASG:
 2. git clone "link del repositorio"
 3.1 aws cloudformation validate-template --template-body file://network.yml
 3.2 git push codecommit::us-east-1://infraestructura-aws
+python3 app.py
 ```
-
 
 <p>
     Ahora podras observar los recursos desplegados de forma correcta en AWS Cloudformation.
 </p>
+
+<h2 href = "https://docs.aws.amazon.com/cloudwatch/">
+    <a href="https://docs.aws.amazon.com/cloudwatch/"> Control CloudWatch </a> 
+</h2>
+
+<h4>
+    Amazon CloudWatch es una herramienta de supervisión que permite monitorear el rendimiento de las aplicaciones, responder a cambios en el desempeño, optimizar el uso de recursos y proporcionar información detallada sobre el estado operativo. Al recopilar datos de todos los recursos de AWS, CloudWatch ofrece una visión completa del rendimiento del sistema, permitiendo a los usuarios configurar alertas, responder automáticamente a cambios y obtener una visión unificada del estado operativo. Revisar GuiaCloudWatch.pdf
+</h4>
